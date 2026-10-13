@@ -7,7 +7,9 @@
     "dev": "nodemon --exec tsx src/server.ts",
     "build": "tsc",
     "start": "ts-node src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "node --import tsx ./node_modules/sequelize-cli/lib/sequelize db:migrate",
+    "rollback": "node --import tsx ./node_modules/sequelize-cli/lib/sequelize db:migrate:undo"
   },
   "repository": {
     "type": "git",
