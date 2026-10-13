@@ -13,6 +13,10 @@ module.exports = {
   },
 
   async down (queryInterface: QueryInterface) {
-    
+    await queryInterface.sequelize.query(`
+      ALTER TABLE hotels
+      DROP COLUMN rating,
+      DROP COLUMN rating_count
+      `);
   }
 };
