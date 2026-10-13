@@ -6,7 +6,6 @@ import { genericErrorHandler } from './middlewares/error.middleware.js';
 import logger from "./config/logger.config.js";
 import { attachCorrelationIdMiddleware } from './middlewares/correlation.middleware.js';
 import sequelize from './db/models/sequelize.js';
-import Hotel from './db/models/hotel.js';
 const app = express();
 
 app.use(express.json());   // if anything comes in response bosy it is concerted into json first
